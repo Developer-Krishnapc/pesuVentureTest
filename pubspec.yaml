@@ -1,0 +1,96 @@
+name: weather_app_pro
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+environment:
+  sdk: ">=3.0.1 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Functional Extensions & Methods
+  dartz: ^0.10.1
+
+  # Networking
+  dio: ^5.5.0
+  freezed_annotation: 2.4.4
+  json_annotation: 4.9.0
+  retrofit: 4.1.0
+
+  # State Management
+  flutter_riverpod: 2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # Local Storage
+  secure_shared_preferences: ^0.0.4
+
+  # Routing
+  auto_route: 9.2.0
+
+  # Connectivity
+  connectivity_plus: ^6.0.4
+
+  # Firebase
+  firebase_core: ^3.3.0
+
+  #SVG
+  flutter_svg: ^2.0.10
+  #Lottie
+  lottie: ^3.1.2
+
+  # Fonts
+  google_fonts: ^6.2.1
+
+  # Widgets
+  gap: ^3.0.1
+  intl: ^0.19.0
+
+  # Animation
+  flutter_animate: ^4.5.0
+
+  # Image viewer
+  cached_network_image: ^3.4.0
+
+  # Location manager
+  geolocator: ^12.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.10
+  flutter_gen_runner: 5.6.0
+  retrofit_generator: ^8.1.2
+  riverpod_generator: ^2.3.10
+  json_serializable: 6.8.0
+  freezed:
+  mockito: ^5.4.4
+  custom_lint: 0.6.4
+  riverpod_lint:
+  auto_route_generator: 9.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/svg/
+    - assets/icons/
+    - assets/images/
+    - assets/lottie/
+    - assets/json/development/
+    - assets/json/staging/
+    - assets/json/production/
+
+flutter_gen:
+  output: lib/presentation/shared/gen/ # Optional (default: lib/gen/)
+  line_length: 80 # Optional (default: 80)
+
+  integrations:
+    flutter_svg: true
+    flare_flutter: true
+    lottie: true

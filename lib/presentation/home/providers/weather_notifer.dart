@@ -93,8 +93,12 @@ class WeatherNotifier extends _$WeatherNotifier {
           'Location is denied forever, please move on to settings and enable the location permission for the app');
     }
 
-    final position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
-    return Right(position);
+    try {
+      final position = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.high);
+      return Right(position);
+    } catch (e) {
+      return const Left('Your Location / GPS is not enabled');
+    }
   }
 }
